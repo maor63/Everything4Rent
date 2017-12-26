@@ -17,6 +17,9 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+//import javax.mail.*;
+//import javax.mail.internet.*;
+//import javax.activation.*;
 
 import java.util.Properties;
 
@@ -34,6 +37,7 @@ public class Main extends Application {
 
 //        CreateSignIn();
 //        CreateLogIn();
+//        sendMail();
 
 
         stage.show();
@@ -149,14 +153,55 @@ public class Main extends Application {
                 RemoveLogIn();
             }
         });
-
-
     }
 
     private void RemoveLogIn()
     {
         grid.getChildren().clear();
     }
+
+//    private sendMail()
+//    {
+//        String to = "talivanov@gmail.com";
+//
+//        // Sender's email ID needs to be mentioned
+//        String from = "talivanov@gmail.com";
+//
+//        // Assuming you are sending email from localhost
+//        String host = "localhost";
+//
+//        // Get system properties
+//        Properties properties = System.getProperties();
+//
+//        // Setup mail server
+//        properties.setProperty("mail.smtp.host", host);
+//
+//        // Get the default Session object.
+//        Session session = Session.getDefaultInstance(properties);
+//
+//        try {
+//            // Create a default MimeMessage object.
+//            MimeMessage message = new MimeMessage(session);
+//
+//            // Set From: header field of the header.
+//            message.setFrom(new InternetAddress(from));
+//
+//            // Set To: header field of the header.
+//            message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
+//
+//            // Set Subject: header field
+//            message.setSubject("This is the Subject Line!");
+//
+//            // Now set the actual message
+//            message.setText("This is actual message");
+//
+//            // Send message
+//            Transport.send(message);
+//            System.out.println("Sent message successfully....");
+//        } catch (MessagingException mex) {
+//            mex.printStackTrace();
+//        }
+//    }
 
 
 }
